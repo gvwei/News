@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DUf-Tz-PIo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Head Line Controller-->
+        <scene sceneID="4Cb-Tv-c5L">
+            <objects>
+                <collectionViewController id="DUf-Tz-PIo" customClass="CZHeadLineController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="WhC-YL-Qai">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OaX-vy-bdg">
+                            <size key="itemSize" width="295" height="357"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeadLine" id="oWu-7l-Nu8" customClass="CZHeadLineCell">
+                                <rect key="frame" x="12.5" y="0.0" width="295" height="357"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="357"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Zr-sf-6gr">
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="315"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDc-E5-53H">
+                                            <rect key="frame" x="8" y="328" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="oeE-fJ-BgH">
+                                            <rect key="frame" x="248" y="320" width="39" height="37"/>
+                                            <color key="pageIndicatorTintColor" red="1" green="0.067218409059999998" blue="0.19294097069999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </pageControl>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="3Zr-sf-6gr" firstAttribute="top" secondItem="oWu-7l-Nu8" secondAttribute="top" id="3Od-so-waW"/>
+                                    <constraint firstAttribute="bottom" secondItem="QDc-E5-53H" secondAttribute="bottom" constant="8" id="6si-Kf-ddd"/>
+                                    <constraint firstItem="QDc-E5-53H" firstAttribute="leading" secondItem="oWu-7l-Nu8" secondAttribute="leading" constant="8" id="7F5-jT-H0G"/>
+                                    <constraint firstItem="3Zr-sf-6gr" firstAttribute="leading" secondItem="oWu-7l-Nu8" secondAttribute="leading" id="HNX-7r-sFA"/>
+                                    <constraint firstAttribute="bottom" secondItem="oeE-fJ-BgH" secondAttribute="bottom" id="Ju7-he-aaQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Zr-sf-6gr" secondAttribute="trailing" id="UvI-bF-mgt"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Zr-sf-6gr" secondAttribute="bottom" constant="42" id="Zkg-rn-ck5"/>
+                                    <constraint firstAttribute="trailing" secondItem="oeE-fJ-BgH" secondAttribute="trailing" constant="8" id="cx9-rs-JLZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="3Zr-sf-6gr" id="rix-Su-LnP"/>
+                                    <outlet property="pageControl" destination="oeE-fJ-BgH" id="vM3-Is-xGa"/>
+                                    <outlet property="titleLabel" destination="QDc-E5-53H" id="kec-17-g98"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="DUf-Tz-PIo" id="SN4-B6-1G4"/>
+                            <outlet property="delegate" destination="DUf-Tz-PIo" id="dr7-ac-oDe"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="layout" destination="OaX-vy-bdg" id="2o1-mM-9ht"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U23-lo-LYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="326"/>
+        </scene>
+    </scenes>
+</document>
